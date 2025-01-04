@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CozyCare Homepage Animation & GSAP</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script defer src="./scripts/logoAnimation.js"></script>
+    <script defer src="./scripts/orderAnimation.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navigation Menu / Title -->
+        <header class="pageNavigation">
+            <div class="navWarpper">
+                <div class="navbar">
+                    <div class="logo"><img src="./assets/Logo.png" alt=""></div>
+                    <div class="mainNav">
+                        <img src="./assets/notification.png" alt="" class="notification">
+                        <img src="./assets/profile.png" alt="" class="profile">
+                    </div>
+                </div>
+                <div class="pageName">Current Orders</div>
+            </div>
+        </header>
+
+        <!-- Current Orders Orders -->
+        <header class="allOrders">
+            <div class="boxContainer one">
+                <div class="bocContainerWrapper">
+                    <div class="mainInfo">
+                        <div class="orderProgress">
+                            <img src="./assets/orderDelivering.png" alt="">
+                            <div class="txt">Order Delivering</div>
+                        </div>
+                        <div class="orderDateTime">
+                            <div class="txt">Pickup : May 5, 08:00AM - 01:00PM </div>
+                            <div class="txt">Pickup : May 5, 08:00AM - 01:00PM </div>
+                        </div>
+                    </div>
+                    <div class="moreInfo">
+                        <button class="btnContainer">
+                            <div class="txt">View Order</div>
+                        </button>
+                        <div class="orderNumber">Order Number : 170</div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxContainer two">
+                <div class="bocContainerWrapper">
+                    <div class="mainInfo">
+                        <div class="orderProgress">
+                            <img src="./assets/orderPending.png" alt="">
+                            <div class="txt">Order Pending</div>
+                        </div>
+                        <div class="orderDateTime">
+                            <div class="txt">Pickup : May 12, 08:00AM - 01:00PM </div>
+                            <div class="txt">Pickup : May 14, 11:00AM - 04:00PM </div>
+                        </div>
+                    </div>
+                    <div class="moreInfo">
+                        <button class="btnContainer">
+                            <div class="txt">View Order</div>
+                        </button>
+                        <div class="orderNumber">Order Number : 550</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Order Navigation -->
+        <header class="ordersNaviagtion">
+            <div class="ordersNaviagtionWrapper">
+                <div class="selectionsWrapper">
+                    <div class="history">
+                        <img src="./assets/history.png" alt="">
+                        <div class="txt">History</div>
+                    </div>
+                    <div class="newOrder">
+                        <img src="./assets/add.png" alt="">
+                        <div class="txt">New Order</div>
+                    </div>
+                    <div class="rewards">
+                        <img src="./assets/rewards.png" alt="">
+                        <div class="txt">Rewards</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+
+</html>

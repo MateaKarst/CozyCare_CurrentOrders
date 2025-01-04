@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #1D2E36;
+}
+
+.container {
+    top: 50px;
+    width: 390px;
+    height: 837px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    border: black solid 3px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    // Navigation Menu / Title
+    .pageNavigation {
+        position: absolute;
+        padding-top: 20px;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+
+        .navWarpper {
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 0 10px 0;
+
+            .navbar {
+                display: flex;
+                flex-direction: row;
+                align-self: center;
+                gap: 38px;
+                padding: 10px 20px 0px 20px;
+
+                .logo {
+                    img {
+                        height: 30px;
+                        width: auto;
+                    }
+                }
+
+                .mainNav {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    padding: 5px 0 0 30px;
+
+                    .notification {
+                        height: 20px;
+                        width: auto;
+                        animation: rotateNotification 2s infinite;
+                        transform-origin: center;
+                    }
+
+                    .profile {
+                        height: 20px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .pageName {
+            align-self: center;
+            font-size: 35px;
+            font-weight: 600;
+        }
+    }
+
+    // Current Orders Orders
+    .allOrders {
+        margin: 150px 10px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+
+        animation: fadeIn 0.5s ease-in-out;
+
+        .boxContainer {
+            background-color: #fff;
+            border-radius: 10px;
+            border: 2px solid #1D2E36;
+            padding: 15px;
+
+            .mainInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                .orderProgress {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 10px;
+                    }
+
+                    .txt {
+                        white-space: nowrap;
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+                }
+
+                .orderDateTime {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    gap: 5px;
+
+                    .txt {
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .moreInfo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .btnContainer {
+                    padding: 10px;
+                    background-color: #5AE3A7;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    .txt {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+
+                .orderNumber {
+                    font-size: 10px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    // Order Navigation
+    .ordersNaviagtion {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #1D2E36;
+        border-radius: 20px 20px 0 0;
+        position: absolute;
+        bottom: -5px;
+        /* Adjusted the bottom position by -5px */
+        width: calc(100% + 10px);
+        /* Increased the width by 10px to cover the hovered area */
+        background-color: #1D2E36;
+        border-radius: 20px 20px 0 0;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .ordersNaviagtionWrapper {
+            .selectionsWrapper {
+                padding: 10px 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 55px;
+
+                .history {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 10px;
+
+                    img {
+                        width: 32px;
+                        height: auto;
+                    }
+
+                    .txt {
+                        color: #fff;
+                        font-size: 10px;
+                        padding-top: 5px;
+                    }
+                }
+
+                .newOrder {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 45px;
+                        height: auto;
+                    }
+
+                    .txt {
+                        white-space: nowrap;
+                        color: #fff;
+                        font-size: 20px;
+                        padding-top: 5px;
+                    }
+                }
+
+                .rewards {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 10px;
+
+                    img {
+                        width: 35px;
+                        height: auto;
+                    }
+
+                    .txt {
+                        padding-top: 5px;
+                        color: #fff;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateNotification {
+
+        0% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(-45deg);
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+}

@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #1D2E36;
+}
+
+.container {
+  top: 50px;
+  width: 390px;
+  height: 837px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  border: black solid 3px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.container .pageNavigation {
+  position: absolute;
+  padding-top: 20px;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.container .pageNavigation .navWarpper {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0 10px 0;
+}
+.container .pageNavigation .navWarpper .navbar {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 38px;
+  padding: 10px 20px 0px 20px;
+}
+.container .pageNavigation .navWarpper .navbar .logo img {
+  height: 30px;
+  width: auto;
+}
+.container .pageNavigation .navWarpper .navbar .mainNav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 5px 0 0 30px;
+}
+.container .pageNavigation .navWarpper .navbar .mainNav .notification {
+  height: 20px;
+  width: auto;
+  animation: rotateNotification 2s infinite;
+  transform-origin: center;
+}
+.container .pageNavigation .navWarpper .navbar .mainNav .profile {
+  height: 20px;
+  width: auto;
+}
+.container .pageNavigation .pageName {
+  align-self: center;
+  font-size: 35px;
+  font-weight: 600;
+}
+.container .allOrders {
+  margin: 150px 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.container .allOrders .boxContainer {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #1D2E36;
+  padding: 15px;
+}
+.container .allOrders .boxContainer .mainInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container .allOrders .boxContainer .mainInfo .orderProgress {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .allOrders .boxContainer .mainInfo .orderProgress img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.container .allOrders .boxContainer .mainInfo .orderProgress .txt {
+  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 600;
+}
+.container .allOrders .boxContainer .mainInfo .orderDateTime {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+}
+.container .allOrders .boxContainer .mainInfo .orderDateTime .txt {
+  font-size: 13px;
+  font-weight: 600;
+}
+.container .allOrders .boxContainer .moreInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .allOrders .boxContainer .moreInfo .btnContainer {
+  padding: 10px;
+  background-color: #5AE3A7;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container .allOrders .boxContainer .moreInfo .btnContainer .txt {
+  font-size: 18px;
+  font-weight: 600;
+}
+.container .allOrders .boxContainer .moreInfo .orderNumber {
+  font-size: 10px;
+  font-weight: 600;
+}
+.container .ordersNaviagtion {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #1D2E36;
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  bottom: -5px;
+  /* Adjusted the bottom position by -5px */
+  width: calc(100% + 10px);
+  /* Increased the width by 10px to cover the hovered area */
+  background-color: #1D2E36;
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+.container .ordersNaviagtion:hover {
+  transform: translateY(-5px);
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .history img {
+  width: 32px;
+  height: auto;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .history .txt {
+  color: #fff;
+  font-size: 10px;
+  padding-top: 5px;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .newOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .newOrder img {
+  width: 45px;
+  height: auto;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .newOrder .txt {
+  white-space: nowrap;
+  color: #fff;
+  font-size: 20px;
+  padding-top: 5px;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .rewards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .rewards img {
+  width: 35px;
+  height: auto;
+}
+.container .ordersNaviagtion .ordersNaviagtionWrapper .selectionsWrapper .rewards .txt {
+  padding-top: 5px;
+  color: #fff;
+  font-size: 10px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotateNotification {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}/*# sourceMappingURL=style.css.map */
